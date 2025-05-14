@@ -1,0 +1,22 @@
+@use './colors';  
+
+:root {
+  --app-max-width: 1440px;
+  --app-padding-x: 1rem;
+  --font-regular: 'PTSans Regular', sans-serif;
+  --font-bold: 'PTSans Bold', sans-serif;
+  --font-display: 'BebasNeue Regular', sans-serif;
+}
+
+.App {
+  background-color: colors.$gray;  
+
+  .app-container {
+    max-width: var(--app-max-width);
+    margin: 0 auto;
+    padding-left: var(--app-padding-x);
+    padding-right: var(--app-padding-x);
+    width: 100%;
+    box-sizing: border-box;
+  }
+}

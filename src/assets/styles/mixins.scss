@@ -1,0 +1,31 @@
+@use 'colors';
+
+@mixin arrow-control-left {
+  border-radius: 50%;
+  background-image: url('@/assets/svg/desktop/arrow.svg');
+  background-repeat: no-repeat;
+  background-position: 50%;
+  cursor: pointer;
+}
+
+@mixin arrow-control-right {
+  @include arrow-control-left;
+  transform: rotate(180deg);
+}
+
+@mixin swiper-arrow-control {
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+  width: 40px;
+  height: 40px;
+  border: none;
+  background-color: colors.$white;
+  background-image: url('@/assets/svg/desktop/blue-arrow.svg');
+  box-shadow: 0 0 15px 0 colors.$shadow;
+
+  &:disabled {
+    opacity: 0;
+    cursor: auto;
+  }
+}

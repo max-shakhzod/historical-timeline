@@ -1,0 +1,145 @@
+@use '../../colors' as colors;
+@use '../../typography' as typography;
+
+.time-intervals {
+  position: absolute;
+  width: 530px;
+  height: 530px;
+  text-align: center;
+
+  &::before {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgba(colors.$dark-blue-1, .2);
+    border-radius: 50%;
+    transform: translateX(-50%);
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    background-color: rgba(colors.$dark-blue-1, .1);
+  }
+
+  &__years-interval {
+    @include typography.pt-sans-bold-font;
+    $leftShift: 235px;
+
+    position: absolute;
+    top: 50%;
+    right: 0;
+    left: 0;
+    margin-left: -$leftShift;
+    font-size: 200px;
+    letter-spacing: -4px;
+    transform: translateY(-50%);
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      z-index: -1;
+      width: calc(100% - $leftShift);
+      height: 1px;
+      background-color: rgba(colors.$dark-blue-1, .1);
+      transform: translateX($leftShift);
+    }
+
+    & .years-interval {
+      &__start-year {
+        color: colors.$violet-blue;
+      }
+
+      &__final-year {
+        color: colors.$pink;
+      }
+    }
+  }
+
+  &__point {
+    position: absolute;
+    top: -3.3%;
+    left: -3.3%;
+    width: 106.6%;
+    height: 106.6%;
+
+    & .point-number {
+      display: inline-block;
+      vertical-align: middle;
+      overflow: hidden;
+      width: 9px;
+      height: 9px;
+      border: 1px solid rgba(colors.$dark-blue-2, .5);
+      border-radius: 50%;
+      line-height: 50px;
+      background-color: colors.$dark-blue-1;
+    }
+
+    & .point-label {
+      position: absolute;
+      top: -25px;
+      width: 54px;
+      opacity: 0;
+      transform: rotate(-30deg);
+    }
+  }
+
+  & .point1 {
+    $degree: 30deg;
+    transform: rotate($degree);
+
+    & .point-number {
+      transform: rotate(-$degree);
+    }
+  }
+
+  & .point2 {
+    $degree: 90deg;
+    transform: rotate($degree);
+
+    & .point-number {
+      transform: rotate(-$degree);
+    }
+  }
+
+  & .point3 {
+    $degree: 150deg;
+    transform: rotate($degree);
+
+    & .point-number {
+      transform: rotate(-$degree);
+    }
+  }
+
+  & .point4 {
+    $degree: 210deg;
+    transform: rotate($degree);
+
+    & .point-number {
+      transform: rotate(-$degree);
+    }
+  }
+
+  & .point5 {
+    $degree: 270deg;
+    transform: rotate($degree);
+
+    & .point-number {
+      transform: rotate(-$degree);
+    }
+  }
+
+  & .point6 {
+    $degree: 330deg;
+    transform: rotate($degree);
+
+    & .point-number {
+      transform: rotate(-$degree);
+    }
+  }
+}

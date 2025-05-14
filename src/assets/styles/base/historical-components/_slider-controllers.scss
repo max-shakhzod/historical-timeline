@@ -1,0 +1,17 @@
+@use '../../mixins' as mixins;
+
+.swiper {
+  &__button-prev {
+    @include mixins.arrow-control-left;
+    @include mixins.swiper-arrow-control;
+    left: 0;
+    transform: translateX(calc(-100% - 20px)) translateY(-50%) rotate(180deg);
+  }
+
+  &__button-next {
+    @include mixins.arrow-control-right;
+    @include mixins.swiper-arrow-control;
+    right: -35px;
+    transform: translateX(calc(-100% - 40px)) translateY(-50%);
+  }
+}

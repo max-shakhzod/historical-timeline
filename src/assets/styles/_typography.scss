@@ -1,0 +1,41 @@
+@font-face {
+  font-family: 'PTSans Regular';
+  src: url('../fonts/PTSans/PTSans-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PTSans Bold';
+  src: url('../fonts/PTSans/PTSans-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'BebasNeue Regular';
+  src: url('../fonts/BebasNeue/BebasNeue-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@mixin pt-sans-regular-font($size: 20px) {
+  font-weight: 400;
+  font-size: $size;
+  font-family: 'PTSans Regular', sans-serif;
+}
+
+@mixin pt-sans-bold-font($size: 20px) {
+  font-weight: 700;
+  font-size: $size;
+  font-family: 'PTSans Bold', sans-serif;
+}
+
+@mixin bebas-neue-regular-font($size: 25px) {
+  font-weight: 400;
+  font-size: $size;
+  font-family: 'BebasNeue Regular', sans-serif;
+}

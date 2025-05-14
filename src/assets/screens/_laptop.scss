@@ -1,0 +1,175 @@
+@media (max-height: 964px) {
+  .historical-dates {
+    .title {
+      font-size: 39px;
+    }
+
+    .time-intervals {
+      scale: .7;
+
+      &__point {
+        & .point-number {
+          font-size: 25px;
+        }
+
+        & .point-label {
+          font-size: 25px;
+        }
+      }
+    }
+
+    &__controls-wrapper {
+      bottom: 30%;
+    }
+
+    .swiper {
+      &-slide {
+        font-size: 17px;
+
+        &__title {
+          font-size: 22px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-height: 688px) {
+  .historical-dates {
+    .title {
+      font-size: 39px;
+    }
+
+    .time-intervals {
+      scale: .6;
+    }
+
+    .arrow-controls {
+      &__arrow-left,
+      &__arrow-right {
+        width: 36px;
+        height: 36px;
+        margin-right: 14px;
+      }
+    }
+
+    .swiper {
+      &-slide {
+        font-size: 17px;
+
+        &__title {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+@media (max-height: 596px) and (min-width: 768px) {
+  .historical-dates {
+    max-width: 1080px;
+
+    .title {
+      font-size: 33px;
+    }
+
+    &__fraction-pagination {
+      font-size: 16px;
+    }
+
+    .time-intervals {
+      scale: .5;
+    }
+
+    .swiper {
+      &__wrapper {
+        width: 860px;
+      }
+
+      &-slide {
+        max-width: 255px;
+
+        font-size: 14px;
+
+        &:not(:last-child) {
+          margin-right: 40px;
+        }
+
+        &__title {
+          margin-bottom: 0;
+
+          font-size: 17px;
+        }
+      }
+
+      &__button-next {
+        right: -200px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .historical-dates {
+    max-width: 720px;
+
+    .title {
+      padding-left: 50px;
+    }
+
+    &__controls-wrapper {
+      bottom: 27%;
+      left: 50px;
+    }
+
+    &__fraction-pagination {
+      margin-bottom: 10px;
+    }
+
+    .arrow-controls {
+      &__arrow-left,
+      &__arrow-right {
+        width: 30px;
+        height: 30px;
+        margin-right: 10px;
+      }
+    }
+
+    .swiper {
+      &__wrapper {
+        bottom: 3%;
+        left: 50px;
+
+        width: 620px;
+      }
+
+      &-slide {
+        max-width: 175px;
+
+        font-size: 13px;
+
+        &:not(:last-child) {
+          margin-right: 30px;
+        }
+
+        &__title {
+          font-size: 16px;
+        }
+      }
+
+      &__button-prev {
+        width: 30px;
+        height: 30px;
+
+        transform: translateX(calc(-100% - 10px)) translateY(-50%) rotate(180deg);
+      }
+
+      &__button-next {
+        width: 30px;
+        height: 30px;
+
+        transform: translateX(calc(-100% + 10px)) translateY(-50%);
+      }
+    }
+  }
+}

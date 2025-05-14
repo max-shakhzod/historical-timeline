@@ -1,0 +1,23 @@
+@use '../../colors' as colors;
+@use '../../typography' as typography;
+
+.title {
+  @include typography.pt-sans-bold-font;  // Namespaced mixin
+
+  position: absolute;
+  top: 15%;
+  left: 0;
+  padding-left: 80px;
+  font-size: 56px;
+  line-height: 120%;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background: linear-gradient(180deg, colors.$violet-blue, colors.$pink);
+  }
+}

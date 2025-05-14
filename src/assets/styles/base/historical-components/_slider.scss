@@ -1,0 +1,42 @@
+@use '../../colors' as colors;
+
+.swiper {
+  &__wrapper {
+    position: absolute;
+    bottom: 5%;
+    left: 80px;
+    width: 1200px;
+  }
+
+  &-slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    max-width: 320px;
+    font-size: 20px;
+
+    &:not(:last-child) {
+      margin-right: 80px;
+    }
+
+    &__title {
+      margin-bottom: 15px;
+      font-size: 25px;
+      color: colors.$blue;
+    }
+
+    &__description {
+    display: -webkit-box;
+    display: box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+
+    -webkit-box-orient: vertical;
+    box-orient: vertical;
+}
+
+  }
+}
