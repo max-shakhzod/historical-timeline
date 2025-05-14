@@ -3,7 +3,7 @@ import ArrowControls from '@/components/ArrowControls';
 import FractionPagination from '@/components/FractionPagination';
 import Slider from '@/components/Slider';
 import Title from '@/components/Title';
-import TimeIntervals from '@/components/circularTimeline';
+import TimeIntervals from '@/components/circularTimeline/TimeIntervals';
 import capitalizeString from '@/utils/capitalizeString';
 import BulletsPagination from './BulletsPagination';
 import ControlsWrapper from './ControlsWrapper';

@@ -2,7 +2,9 @@
 function Title() {
   return (
     <div className="title">
-      Исторические <br /> даты
+      Исторические 
+      <br /> 
+      даты
     </div>
   );
 }
