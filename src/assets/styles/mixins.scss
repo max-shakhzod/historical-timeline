@@ -2,15 +2,16 @@
 
 @mixin arrow-control-left {
   border-radius: 50%;
-  background-image: url('@/assets/svg/desktop/arrow.svg');
+  background-image: url('@/assets/svg/desktop/blue-arrow.svg'); 
   background-repeat: no-repeat;
   background-position: 50%;
+  transform: rotate(180deg); 
   cursor: pointer;
 }
 
 @mixin arrow-control-right {
-  @include arrow-control-left;
-  transform: rotate(180deg);
+  @include arrow-control-left; 
+  transform: rotate(0deg); 
 }
 
 @mixin swiper-arrow-control {
@@ -21,7 +22,6 @@
   height: 40px;
   border: none;
   background-color: colors.$white;
-  background-image: url('@/assets/svg/desktop/blue-arrow.svg');
   box-shadow: 0 0 15px 0 colors.$shadow;
 
   &:disabled {

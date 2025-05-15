@@ -1,4 +1,6 @@
 import { type MouseEvent } from 'react';
+import '../assets/styles/base/historical-components/_arrow-controls.scss';
+
 
 export type ArrowControlsStatus = 'left' | 'right' | null;
 

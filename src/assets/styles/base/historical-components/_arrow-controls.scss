@@ -1,0 +1,38 @@
+@use '../../mixins.scss' as mixins;
+@use '../../colors.scss' as colors;
+
+.arrow-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  width: fit-content;
+
+  &__arrow-left,
+  &__arrow-right {
+    @include mixins.swiper-arrow-control;
+    width: 50px;
+    height: 50px;
+    border: 1px solid colors.$dark-blue-1;
+    border-radius: 50%;
+    position: relative;
+    background-color: colors.$white;
+    box-shadow: 0 0 15px 0 colors.$shadow;
+    cursor: pointer;
+  }
+
+  &__arrow-left {
+    @include mixins.arrow-control-left;
+  }
+
+  &__arrow-right {
+    @include mixins.arrow-control-right; 
+  }
+
+  &__arrow-left_disabled,
+  &__arrow-right_disabled {
+    opacity: 0.5;
+    pointer-events: none;
+    cursor: not-allowed;
+  }
+}
